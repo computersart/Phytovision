@@ -25,8 +25,12 @@ transform = transforms.Compose([
 ])
 
 # Streamlit app
-st.title("Fruit and Vegetable Classifier")
+st.title("Phytovision v1")
 st.write("Upload an image of a fruit or vegetable to classify it.")
+st.write("Please note this is a very early prototype and the model might make some mistakes. I am working on improving accuracy now that the foundations are almost complete")
+st.write("ResNet18 model created with the help of PyTorch and trained on a dataset from Kagglehub")
+st.write("I am working on Phytovision v2 that uses a similar architecture to this with added improvements and will be trained on a plant disease dataset")
+ 
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
