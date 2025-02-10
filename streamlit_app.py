@@ -35,7 +35,7 @@ st.write("I am working on Phytovision v2 that uses a similar architecture to thi
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
     
     # Preprocess image
     image = transform(image).unsqueeze(0).to(device)
